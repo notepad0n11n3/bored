@@ -1,0 +1,299 @@
+Q: ¿Cómo asignar una IP a mi ordenador?
+A: ifconfig [interface] nº de IP
+
+Q: ¿Cómo hago para ver los archivos del directorio anterior?
+A: ls ../
+
+Q: ¿Cómo sé en qué directorio estoy?
+A: pwd
+
+Q: ¿Como veo los archivos en un directorio?
+A: ls
+
+Q: ¿Cómo puedo crear archivos en Unix?
+A: Con el comando "touch" seguido del nombre de archivo que quiero crear.
+
+Q: ¿Cómo puedo iniciar y cerrar sesión con mi nombre de usuario?
+A: Introduzco mi nombre de usuario (login:) y mi clave (password:) Utilizo exit para salir de una consola
+
+Q: ¿Cómo puedo crear uno o varios directorios?
+A: Con el comando mkdir seguido del nombre o nombres, separados por espacio, de los directorios que quiero crear.
+
+Q: ¿En que directorios se guardan generalmente los programas?
+A: Generalmente en /bin /sbin y /usr/sbin, aunque depende también de la distribución.
+
+Q: ¿Con denomina Unix a los disco duros IDE?
+A: Los denomina como hd (de Hard Disk). Canal Primario: hda (Maestro) y hdb (Esclavo) Canal Secundario: hdc (Maestro) y hdd (Secundario)
+
+Q: ¿Cómo puedo obtener un listado de los procesos que tengo en ejecución?
+A: Con el comando ps y varias opciones (por ejemplo -axf). También, de forma interactiva con el comando top.
+
+Q: ¿De qué forma puedo averiguar el uso de memoria que consume mi ordenador?
+A: Comando free.
+
+Q: Si hago ls ¿cual es el directorio del que lista los archivos?
+A: El directorio actual, es decir ./
+
+Q: ¿Cómo se cambia al propietario de un fichero?
+A: con el comando chown
+
+Q: ¿Cómo puedo saber el orden de ejecución de mis procesos?
+A: Mediante el comando ps y observando el nº que aparece al lado del proceso (PID)
+
+Q: ¿Con qué comando se monitorea la memoria?
+A: Comando top
+
+Q: ¿Cómo puedo ver el contenido de un archivo sin abrirlo?
+A: Utilizando el comando cat
+
+Q: ¿Cuál es el comando para saber donde estás?
+A: pwd
+
+Q: ¿Cómo se quien soy?
+A: Utilizando el comando whoami
+
+Q: ¿Puedo tener más de una consola abierta?
+A: Control + alt + F1
+
+Q: ¿Existen físicamente todos los dispositivos que hay en /dev?
+A: No
+
+Q: ¿Qué comando reinicia el equipo?
+A: reboot
+
+Q: ¿Comando para apagar mi ordenador?
+A: halt
+
+Q: ¿Cómo borro la pantalla?
+A: clear
+
+Q: ¿Con qué comando puedo empaquetar y desempaquetar un conjunto de archivos o directorios?
+A: empaquetar: tar -c desempaquetar: tar -x
+
+Q: ¿Con que comando genérico de UNIX puedo comprimir y descomprimir archivos y directorios?
+A: gzip y gunzip
+
+Q: ¿Cómo sé los usuarios conectados a mi máquina?
+A: who
+
+Q: ¿Cómo puedo obtener información detallada de un comando?
+A: con el man "nombrecomando"
+
+Q: ¿Donde se escriben los comandos?
+A: En el promt
+
+Q: ¿Cómo un archivo sin posibilidad de recuperación?
+A: con shred
+
+Q: ¿Cómo creo un enlace?
+A: con ln
+
+Q: ¿Cómo borrar directorios con todos sus archivos dentro?
+A: rm -r
+
+Q: ¿Cómo averiguar la cantidad de disco utilizado?
+A: du
+
+Q: ¿Cómo se le llaman a los drivers en UNIX?
+A: módulos
+
+Q: En consola, ¿cómo puedo autocompletar?
+A: Con la tecla TAB
+
+Q: ¿Cómo puedo matar un proceso?
+A: con kill
+
+Q: ¿Qué es el kernel?
+A: Es el núcleo del sistema operativo
+
+Q: ¿Cómo se que versión del kernel tengo?
+A: uname -r
+
+Q: ¿Cómo cargo y descargo un módulo?
+A: insmod y rmmod
+
+Q: ¿Cómo visualizo los módulos cargados?
+A: lsmod
+
+Q: ¿Cómo obtengo la información sobre un módulo determinado?
+A: con modinfo
+
+Q: ¿Cómo se le llama al intérprete de comandos?
+A: bash
+
+Q: ¿Cómo ver lo que hacen los usuarios que están conectados en la red?
+A: comando w
+
+Q: ¿Dónde se guardan los archivos de configuración del sistema?
+A: en /etc
+
+Q: ¿Cómo diferencio entre ruta absoluta y ruta relativa?
+A: Si hay una / delante de la ruta
+
+Q: ¿Dónde se guardan los archivos de usuario?
+A: en /home
+
+Q: ¿Cómo puedo ver los detalles de un archivo?
+A: con ls -i
+
+Q: ¿De qué forma puedo crear, eliminar o modificar particiones en UNIX?
+A: con fdisk
+
+Q: ¿Cuántos niveles de ejecución tiene linux?
+A: 5
+
+Q: ¿Cómo ejecuto un proceso en 2º plano?
+A: comando &
+
+Q: ¿Cómo traer un proceso en 2º plano al 1º?
+A: con fg %n proceso
+
+Q: ¿Cómo puedo buscar la ubicación de un comando determinado?
+A: whereis comando
+
+Q: ¿Cómo borro un directorio?
+A: con el comando rmdir
+
+Q: ¿Puede haber 2 archivos o más con la misma ruta absoluta?
+A: No
+
+Q: ¿Cómo situar el cursor al principio de una línea?
+A: con ctrl + a
+
+Q: ¿Cómo visualizo la fecha y hora del sistema?
+A: comando date
+
+Q: ¿Cómo puedo obtener ayuda acerca de un comando?
+A: comando --help
+
+Q: ¿Qué letra significa permiso de ejecución?
+A: x
+
+Q: ¿A que se refiere cuando se dice que los entornos Unix son CASE SENSITIVE?
+A: Que distingue mayúsculas de minúsculas
+
+Q: ¿Qué significa ./ ?
+A: directorio actual
+
+Q: ¿Qué significa ../ ?
+A: directorio anterior
+
+Q: ¿Qué significan las letras FHS?
+A: Es un standard de jerarquía de archivos, significa: File Hierarchy System
+
+Q: ¿Qué es un archivo con extensión .rpm?
+A: Sistema gestor de paquetes (rpm:redhat package manager)
+
+Q: ¿Qué es una consola?
+A: Es un intérprete de comandos
+
+Q: ¿Cómo puedo ver más allá de la pantalla?
+A: Shift+Av Pág, para avanzar Shift+Re Pág, para retroceder
+
+Q: ¿Cómo consulto el historial de comandos?
+A: Con los cursores (flechas arriba y abajo)
+
+Q: ¿Qué es pts?
+A: Es un emulador de la terminal de consola en modo gráfico
+
+Q: ¿Cómo accedo a la consola desde el modo gráfico?
+A: Ctrl+Alt+Fx (donde x será el número de la consola tty a la que se quiera acceder)
+
+Q: ¿Cómo se los grupos a los que pertenezco?
+A: utilizando el comando groups
+
+Q: ¿Qué hace el comando echo?
+A: muestra los argumentos por pantalla
+
+Q: ¿Cómo puedo saber en que consola me encuentro?
+A: con el comando tty
+
+Q: ¿Cómo se hace un enlace simbólico?
+A: ln -s origen nombre_enlace
+
+Q: ¿Cómo hago un enlace en el directorio dir a un archivo en el directorio actual?
+A: ln -s archivo.ejemplo dir/ Si no pongo el nombre de archivo el enlace tendrá el mismo nombre
+
+Q: ¿Cómo hago para ir al final de línea en una consola?
+A: C-e (Control y la tecla e)
+
+Q: ¿Cómo hago para avanzar hacia atrás, palabra a palabra, en una consola?
+A: M-b (La tecla META en una plataforma IA32 suele ser la tecla ALT)
+
+Q: ¿Cómo hago para borrar desde el cursos hasta el final de línea?
+A: C-k
+
+Q: ¿Cómo hago para borrar la palabra siguiente?
+A: M-d
+
+Q: Si quiero ver cual es la diferencia horaria GMT de mi sesión, ¿cómo hago?
+A:
+
+Q: ¿Cómo sé cual es el nombre de la máquina en la que estoy conectado?
+A: hostname . También vale uname -n
+
+Q: ¿Cómo hago para ver las variables de entorno de mi sesión?
+A: env . Aunque también vale printenv o set (que en realidad sirve para asignar variables)
+
+Q: Puedo ejecutar un comando que no esté en mi directorio actual
+A: Sí, puedo ejecutar un comando poniendo la ruta absoluta y/o relativa. Por ejemplo /sbin/comando . También es posible ejecutar el comando si está en los directorios que contiene la variable de entorno PATH
+
+Q: ¿Cómo muestro el contenido de la variable PATH?
+A: echo $PATH . Un ejemplo típico es: /usr/local/bin:/usr/bin:/bin:/usr/bin/X11 , observa que hay varios directorios separados por el caracter delimitado ':'
+
+Q: ¿Cómo hago para escribir en consola, sin parar, "Hola, soy yo"?
+A: yes "Hola, soy yo"
+
+Q: ¿Cómo hago para copiar archivo1 a archivo2 que está en el directorio dir?
+A: cp archivo1 ./dir/
+
+Q: Quiero construir un archivo suma que tenga el contenido de A1 y A2, ¿cómo hago?
+A: cat A1 A2 > suma
+
+Q: ¿Cómo sé cuantas líneas tiene un archivo?
+A: wc -l
+
+Q: Suponiendo que tengo el archivo software.tar.gz y el archivo de firma MD5 software.tar.gz.md5, ¿cómo compruebo que es correcta?
+A: md5sum -cv software.tar.gz.md5
+
+Q: Cómo hago para extraer campos de texto de un archivo
+A: Con el comando cut . El archivo tiene líneas de texto, separadas por el caracter de salto de línea \n. Además cada línea de texto tiene los campos separados por un caracter delimitado, el estándar es ':'
+
+Q: ¿Cómo redirecciono la salida estándar de error?
+A: Utilizando un 2 antes del operador de salida estandar. Por ejemplo: comando 2>archivo_error
+
+Q: ¿cómo hago para cancelar la operación de un comando?
+A: C-c
+
+Q: ¿Cómo hago para enviar el caracter EOF a la entrada estándar?
+A: C-d
+
+Q: ¿Puedo descomprimir un archivo ZIP Windows en Linux?
+A: Sí, con el comando unzip. Este comando no está instalado de forma estándar. También existe el comando unrar para descomprimir el formato RAR
+
+Q: ¿Cómo hago para saber el tiempo que tarda en ejecutarse un comando?
+A: time comando
+
+Q: Si quiero crear el directorio dir11 dentro de dir1, y dir1 no existe, ¿cómo lo hago con una sola instrucción?
+A: mkdir -p dir1/dir11 . Es la opción p del comando mkdir
+
+Q: ¿Cómo hago para encontrar si hay un usuario que se llame pepe?
+A: grep pepe /etc/passwd
+
+Q: ¿Cómo mostrar todas las líneas de un archivo de texto que NO contengan la palabra hola?
+A: grep -v hola archivo.txt
+
+Q: ¿Cómo hago para ver qué usuarios no tienen una shell asignada?
+A: grep ":$" /etc/passwd . $ es el caracter especial de las expresiones regulares para el fin de línea, por lo tanto el patrón coincide con las líneas que terminan en : , es decir que no tienen una shell asignada
+
+Q: ¿Como encuentro los archivos terminados en .txt en mi directorio actual?
+A: ls *.txt o también find ./ -name .txt
+
+Q: Quiero ver el contenido de los archivos de texto que empiecen por a, seguidos de un 3 o un 4, y terminados en .sh, ¿como hago?
+A: cat a[23]*.sh
+
+Q: Estoy perdido en el árbol de directorios, ¿cómo vuelvo a mi HOME?
+A: cd o también cd ~ . El home está en la variable de entorno HOME, o en el caracter ~
+
+Q: Quiero ver cuanto espacio ocupa mi home, ¿cómo hago?
+A: du -sh ~

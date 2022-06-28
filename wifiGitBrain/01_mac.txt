@@ -1,0 +1,5 @@
+::: ifconfig
+::: iwconfig
+
+::: macchanger -h
+::: macchanger -s wlan1         // printMac tplink

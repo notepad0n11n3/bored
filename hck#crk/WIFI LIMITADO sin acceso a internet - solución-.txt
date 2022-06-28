@@ -1,0 +1,40 @@
+SOLUCIÓN: ¿wifi se desconecta o pone limitado?
+Opciones
+
+el ?02-26-2013 04:18 AM
+
+Tenía este problema: se me desconectaba el wifi de mi nuevo portátil Lenovo B580 o me ponía conexión limitada. Por otro lado, en Minipuerto WAN sale el triángulito amarillo avisando de que no está bien. 
+
+ 
+
+En la red no encuentro info pero el servicio técnico de Lenovo me lo resuelve: 
+
+Por lo visto es una incompatibilidad con Windows 8 y la configuración de energía. 
+
+ 
+
+SOLUCIÓN:
+
+ 
+
+1º Paso: configuración<panel de control<configuración de energía (en ver con pon iconos grandes y verás la opción con el dibujo de la pila<bien, ahí en enery saver le das a cambiar la configuración del plan<cambiar la configuración avanzada de energía<configuración de adaptador inalámbrico<modo de ahorro de energía. Aquí poner las dos opciones con ahorro de energía máximo<aceptar, aceptar...
+
+ 
+
+2º Paso: configuración<panel de control<administrador de dispositivos<adaptadores de red<adaptador de tarjeta minide media altura PCI express de tarjeta de red inalámbrica LAN... (vamos, donde está el tema del wifi). Aquí pulsamos botón derecho y opción propiedades<pestaña de administración de energía<DESACTIVAMOS permitir que el equipo apague este dispositivo para ahorrar energía<aceptar<reiniciar<probar el wifi que ahora debería funcionar correctamente.
+
+ 
+
+ 
+
+PROBLEMA DE MINIPUERTO WAN con el dichoso triangulito. Me han dicho que no es grave, que es una actualización de windows 8, que restaure a como salió de fábrica y que sólo instale las actualizaciones importantes y no las opcionales.
+
+ 
+
+Pongo todo esto porque casi me vuelvo loco indagando por la red y probando cosas. La solución no la he visto por la red pero Lenovo la conoce. Si Lenovo no la ha puesto en el foro mal por no ponerla. Si soy yo que no la he encontrado pues mal para mí que no la he visto. De todos modos ahí la tenéis para los que os sirva.
+
+ 
+
+ 
+
+Saludos a todos.

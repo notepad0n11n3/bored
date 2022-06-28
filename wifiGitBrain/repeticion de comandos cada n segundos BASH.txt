@@ -1,0 +1,3 @@
+::: watch -n 1 ls -lah
+
+::: watch -n 60 sudo apt update

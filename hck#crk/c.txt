@@ -1,0 +1,127 @@
+Inicio de sesión en BackTrack
+Una vez que la instalación de BackTrack se lleva a cabo, el nombre de usuario y contraseña por defecto obligado a entrar  son root / toor.
+NOTA: Usted no será capaz de ver la contraseña mientras la escribe.
+Iniciando entorno de interfaz gráfica de usuario
+Después de iniciar sesión  puede iniciar el entorno gráfico con el comando startx.
+Start X no inicia!
+En raras ocasiones (por ejemplo, después de una instalación de VMware herramientas, o cuando se utilizan tarjetas de vídeo no compatible), Start X no se iniciará. Si eso sucede, usted tiene varias opciones que puedes probar con el fin de solucionar el problema:
+Reconfigurar el paquete del servidor X, puede restablecer (y con frecuencia corregir) las configuraciones de Xorg con el siguiente comando:
+  root@bt:~# dpkg-reconfigure xserver-xorg
+Si usted está usando Backtrack 5 en 64 con KDE debe intentar lo siguiente:
+   root@bt:~# rm /root/.kde/cache-*
+NOTA: A veces puede que tenga que eliminar también las carpetas de caché en / var / tmp ejecutando el siguiente comando:
+   root@bt:~# rm -rf /var/tmp/kdecache-*
+ 
+Hacer que la red comienze a trabajar
+Si usted no ha notado aún BackTrack no se inicia con la creación de redes de forma predeterminada con el fin de aumentar su sigilo.
+Configuración de la IP manualmente
+En primer lugar, se creó la red manualmente. En el siguiente ejemplo vamos a suponer las siguientes direcciones y su propósito:
+   IP Address      -  192.168.1.112/24
+   Default Gateway -  192.168.1.1
+   DNS server      -  192.168.1.1
+Con el fin de configurar estos vamos a ejecutar los siguientes comandos:
+root@bt:~# ifconfig eth0 192.168.1.112/24
+root@bt:~# route add default gw 192.168.1.1
+root@bt:~# echo nameserver 192.168.1.1 > /etc/resolv.conf
+Obtener una dirección IP estática a pegarse entre reinicios
+Estos valores sin embargo, sólo durará hasta que se reinicie, así que si queremos ahorrar entre reinicios tenemos que editar el archivo / etc / network / interfaces de esta manera:
+# Este archivo describe las interfaces de red disponibles en el sistema
+# Y cómo activarlas. Para obtener más información, vea Interfaces (5).
+# La interfaz de red de bucle invertido
+auto lo
+iface lo inet loopback
+# La interfaz de red primaria
+auto eth0
+iface eth0 inet static
+        address 192.168.1.112
+        netmask 255.255.255.0
+        network 192.168.1.0
+        broadcast 192.168.1.255
+        gateway 192.168.1.1
+Editar el archivo en su caso, a continuación, que la red aparece automáticamente en el arranque:
+root@bt:~# update-rc.d networking defaults
+root@bt:~# /etc/init.d/networking restart
+Obtener una dirección IP de DHCP
+Con el fin de obtener una IP de un servidor DHCP que puede emitir el comando dhclient <interface> de la siguiente manera:
+root@bt:~# dhclient eth0
+Internet Systems Consortium DHCP Client V3.1.1
+Copyright 2004-2008 Internet Systems Consortium.
+All rights reserved.
+For info, please visit http://www.isc.org/sw/dhcp/
+
+Listening on LPF/eth0/00:0c:29:81:74:21
+Sending on   LPF/eth0/00:0c:29:81:74:21
+Sending on   Socket/fallback
+DHCPREQUEST of 192.168.1.112 on eth0 to 255.255.255.255 port 67
+DHCPACK of 192.168.1.112 from 192.168.1.1
+bound to 192.168.1.112 -- renewal in 37595 seconds.
+root@bt:~#
+Uso de la secuencia de comandos para iniciar la red
+Hay una secuencia de comandos para iniciar la red en el directorio / etc / init.d que trata de empezar a escuchar en todas las interfaces / / etc network / interfaces (se puede eliminar las que no es necesario). Para empezar se ejecuta el siguiente comando:
+root@bt:~# /etc/init.d/networking start
+WICD Network Manager
+Otra forma de configurar su red está utilizando el Administrador de Red WICD, usted lo puede encontrar en el menú:
+Menú> Internet> Wicd Network Manager
+NOTA: Tenga en cuenta que al iniciar WICD obtendrá un error:
+
+Con el fin de librarse de este error se debe reiniciar Backtrack, que antes de comenzar WICD abrir un terminal y escribe lo siguiente:
+root@bt:~# dpkg-reconfigure wicd
+root@bt:~# update-rc.d wicd defaults
+Ahora, después de un reinicio del error no debe ocurrir nunca más.
+Cambiar la contraseña de root
+Como ustedes saben retroceso viene con un nombre de usuario y contraseña por defecto (root / toor), es importante que cambiemos la contraseña root especialmente cuando se ejecutan los servicios como SSH. Podemos cambiar la contraseña mediante el comando passwd:
+root @ bt: ~ # passwd Introduzca la nueva contraseña UNIX: {introducir la nueva contraseña aquí} Vuelva a escribir la nueva contraseña de UNIX: {introduzca su nueva contraseña} passwd: contraseña actualizada correctamente root @ bt: ~ #
+Iniciando servicios
+BackTrack tiene varios servicios como Apache, SSH, MySQL, VNC, etc Todos ellos están desactivados por defecto. Para iniciar un servicio como SSH, puede utilizar los scripts de inicio. Por ejemplo, para iniciar el servicio SSH:
+root@bt:~# sshd-generate  # Specific to the SSH service - needed to generate SSH keys
+root@bt:~# /etc/init.d/ssh start
+Starting OpenBSD Secure Shell server: sshd.
+root@bt:~# /etc/init.d/ssh stop 
+Stopping OpenBSD Secure Shell server: sshd.
+root@bt:~#
+Cuando se utiliza un servidor ssh, por primera vez en el retroceso será necesario para generar las claves:
+root@bt:~# sshd-generate
+Para activar un servicio en tiempo de arranque, puede utilizar el comando update-rc.d, por ejemplo, tener SSH lanzar en el arranque:
+root@bt:~# update-rc.d -f ssh defaults
+ Adding system startup for /etc/init.d/ssh ...
+  /etc/rc0.d/K20ssh -> ../init.d/ssh
+  /etc/rc1.d/K20ssh -> ../init.d/ssh
+  /etc/rc6.d/K20ssh -> ../init.d/ssh
+  /etc/rc2.d/S20ssh -> ../init.d/ssh
+  /etc/rc3.d/S20ssh -> ../init.d/ssh
+  /etc/rc4.d/S20ssh -> ../init.d/ssh
+  /etc/rc5.d/S20ssh -> ../init.d/ssh
+root@bt:~#
+Comandos comunes apts
+apt-get install <package>  Descargas <paquete> y todas sus dependencias, y se instala o actualiza ellos.
+apt-get remove [- purge] <paquete> Elimina <paquete> y los paquetes que dependen de ella. – Purge especifica que los paquetes deben ser purgados.
+apt-get update Actualiza los paquetes listados en el repositorio, se debe ejecutar al menos una vez a la semana.
+apt-get upgrade Actualizaciones de actualización todos los paquetes instalados con las actualizaciones disponibles en el repositorio. se debe ejecutar una vez por semana.
+apt-get dist-upgrade [-u]  Al igual que apt-get upgrade, salvo que la actualización dist-va a instalar o eliminar paquetes para satisfacer las dependencias.
+apt-cache search <pattern> paquetes y descripciones de <pattern>.
+apt-cache show <package> espectáculo Muestra la descripción completa de <paquete>.
+apt-cache showpkg <package> Muestra un detalle mucho más sobre <paquete>, y sus relaciones con otros paquetes.
+man apt le dará más información sobre estos comandos, así como muchos de los que son de uso menos común.
+Comandos comunes dpkg
+dpkg -i <package.deb> Instala un archivo de paquete, uno que ha descargado manualmente, por ejemplo.
+dpkg -c <package.deb> Muestra el contenido de un archivo <package.deb>. deb.
+dpkg -I <package.deb> Extrae la información de los paquetes de <package.deb> un archivo. deb.
+dpkg -r <package> Quita un paquete instalado llamado <paquete>
+dpkg -P <package> purgas un paquete instalado llamado <paquete>. La diferencia entre eliminar y purgar es que mientras que eliminar los datos se eliminan sólo los ejecutables, y de purga, también se eliminan todos los archivos de configuración, además.
+dpkg -L <package> da una lista de todos los archivos instalados por <paquete>. Véase también dpkg-c para comprobar el contenido de un archivo. Deb.
+dpkg -s <package> Muestra información sobre el <paquete> paquete instalado. Ver también apt-cache show para ver la información del paquete en el archivo de Debian y dpkg-I para la visualización de la información del paquete extraído de un archivo. Deb.
+dpkg-reconfigure <package> Vuelve a configurar un paquete instalado
+man dpkg les dará más información sobre estos comandos, así como muchos de los que son de uso menos común.
+¿Cómo puedo encontrar más información sobre un comando en particular, o el uso de los programas?
+La mayoría de los comandos tendrán lo que se llama una página de manual (página del manual) que se puede ver escribiendo:
+root@bt:~# man <command you want more info on>
+Otro recurso muy bueno en el uso de comandos de Linux se puede encontrar en linuxcommand.org
+Algunos programas no tienen una página de manual, pero usted puede obtener más información sobre su utilización, escriba:
+root@bt:~# <program name> Just the program name without any arguements.
+o
+root@bt:~# <program name> -help
+o
+root@bt:~# <program name> --help
+o
+root@bt:~# <program name> -h
+Algunos programas utilizan otros métodos, pero por lo general son sólo una variación de uno de estos cinco comandos.

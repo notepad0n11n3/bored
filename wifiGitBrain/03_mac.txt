@@ -1,0 +1,7 @@
+::: macchanger -l     ///listMac
+::: macchanger -l | grep -i "NaTiOnAl SeCuRiTy AgEnCy"
+
+
+::: ifconfig wlan1mon down
+::: macchanger --mac=00:20:91:8f:a2:13 wlan1mon
+::: ifconfig wlan1mon up  && macchanger -s wlan1mon
