@@ -8,10 +8,13 @@ int main(int argc, char *argv[]){
 
   if( argc != 2){
     printf("\n\t[!] Uso:\t %s  <user_name> ...!!!\n\n", argv[0] );
+    fprintf(stderr, "\n\t[!] Uso:\t %s  <user_name> ...!!!\n\n", argv[0] );
   }
 
   if( strcmp(argv[1], "x89p") == 0 ){
     printf("\n\tWelcome back x89p\n");
+    fprintf(stderr, "\n\tWelcome back x89p\n");
   }
+
   return 0;
 }
