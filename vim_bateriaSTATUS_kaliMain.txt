@@ -1,0 +1,9 @@
+
+
+function! Battery_mango()
+	return system("upower --dump 2>/dev/null | grep -E 'DisplayDevice' -A 15 | grep -E 'state|percentage' | awk '{print $2}' | tr '\n' ':' | tr -d '\n' ")
+endfunction
+
+
+
+set statusline+=\ %{Battery_mango()}
