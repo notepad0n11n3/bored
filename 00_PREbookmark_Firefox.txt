@@ -28,4 +28,16 @@ https://www.amazon.com/Black-Hat-Python-2nd-Programming/dp/1718501129/ref=d_bmx_
 https://www.amazon.com/TCP-Guide-Comprehensive-Illustrated-Protocols/dp/159327047X/ref=sr_1_1?crid=1X36VQF4QK5R8&keywords=the+tcp+ip+guide&qid=1669238646&s=books&sprefix=the+tcp+ip+guid%2Cstripbooks-intl-ship%2C180&sr=1-1
 
 
+https://www.amazon.com/Nutshell-Definitive-Reference-Peter-Prinz-ebook/dp/B0197CH96O/ref=d_pd_vtp_sccl_3_2/141-4492172-7284546?pd_rd_w=2bKYI&content-id=amzn1.sym.8e065679-52e9-4d16-ae63-fa3d08b93cef&pf_rd_p=8e065679-52e9-4d16-ae63-fa3d08b93cef&pf_rd_r=1G9BM5X66JABJWN6HE4C&pd_rd_wg=XUTpt&pd_rd_r=bb21f9a8-6b98-4950-b51c-f6038dcefded&pd_rd_i=B0197CH96O&psc=1
+
+https://www.amazon.com/Practical-Programming-Does-Nutshell-Handbooks-ebook/dp/B005EI8622/ref=d_pd_vtp_sccl_3_4/141-4492172-7284546?pd_rd_w=2bKYI&content-id=amzn1.sym.8e065679-52e9-4d16-ae63-fa3d08b93cef&pf_rd_p=8e065679-52e9-4d16-ae63-fa3d08b93cef&pf_rd_r=1G9BM5X66JABJWN6HE4C&pd_rd_wg=XUTpt&pd_rd_r=bb21f9a8-6b98-4950-b51c-f6038dcefded&pd_rd_i=B005EI8622&psc=1
+
+https://www.amazon.com/Programming-Language-PROGRAMMING-LANG-_p2-ebook/dp/B009ZUZ9FW/ref=zg_bs_8288737011_sccl_6/141-4492172-7284546?psc=1
+
+    #esto no es seguro  network programing C
+https://www.amazon.com/Hands-Network-Programming-programming-optimized-ebook/dp/B07PSJKHKJ/ref=zg_bs_8288737011_sccl_8/141-4492172-7284546?psc=1
+
+https://www.amazon.com/Understanding-Using-Pointers-Techniques-Management-ebook/dp/B00CLX8PL0/ref=d_pd_sim_sccl_3_5/141-4492172-7284546?pd_rd_w=BNCXq&content-id=amzn1.sym.9125e5ab-ea95-44ef-9958-112d5f0f26f0&pf_rd_p=9125e5ab-ea95-44ef-9958-112d5f0f26f0&pf_rd_r=QQGG9KFVXVBBBKJYQNDR&pd_rd_wg=AvKzQ&pd_rd_r=db1d8881-c137-44f2-97ac-3dd8805d40c5&pd_rd_i=B00CLX8PL0&psc=1
+
+
 
