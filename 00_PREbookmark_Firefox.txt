@@ -1,19 +1,14 @@
 ### ## #    links pre ::: push origin master    ($up)
 
- # InsiderPhD    BugBounty channel <3 <3 <3
-    https://www.youtube.com/@InsiderPhD
-    https://www.youtube.com/watch?v=gINAtzdccts
-
-# obfuscated C programs: Introduction <3 <3 <3 <3 <3 <3 <3
-
-https://www.youtube.com/watch?v=rwOI1biZeD8
-
-
-https://github.com/hackerhouse-opensource/exploits/blob/master/xclm-exploit.c
-
 
 ### C 
 http://www.lcc.uma.es/~pscp/doc/cavanzado.pdf
+
+
+
+
+
+
 
 
 ### booksAmazon
