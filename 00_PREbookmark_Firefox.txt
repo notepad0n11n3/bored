@@ -1,20 +1,13 @@
-### ## #    links pre ::: push origin master    ($up)
+       #    links pre ::: push origin master    ($up)
 
 https://www.pornhub.com/view_video.php?viewkey=ph62fa100647b13
 https://www3.hentaila.com/hentai-hitozuma-mitsu-to-niku
 https://nhentai.net/g/305315/
 https://www.pornhub.com/view_video.php?viewkey=ph63affa9cc3667
 
- ## BugBounty
-https://www.youtube.com/watch?v=-xbbvAKGXK8     <<-- here GO
-
-https://www.youtube.com/watch?v=yCUQBc2rY9Y
-
 
 ### C 
 http://www.lcc.uma.es/~pscp/doc/cavanzado.pdf
-
-https://www.geeksforgeeks.org/c-programming-language/?ref=shm           ... <3 <3 <3
 
 
 ###  Carmen Fantasy, Op. 25      youtube     9/10
@@ -23,7 +16,14 @@ https://www.youtube.com/watch?v=h8OPx7oVXZM
 
 
 
-### booksAmazon
+
+
+
+
+
+
+
+  # BOOKS_AMAZON
 
 https://www.amazon.com/Bug-Bounty-Bootcamp-Reporting-Vulnerabilities/dp/1718501544/ref=sr_1_2?crid=3VUY2K6GXZX48&keywords=bug+bounty&qid=1669226047&sprefix=bug+bounty%2Caps%2C192&sr=8-2
 
