@@ -6,11 +6,6 @@ https://www.filmoves.net/serie/estamos-muertos/temporada-1/capitulo-4
 *****  C youtube  new C youtube 
   https://www.youtube.com/watch?v=bJaJeTlebko
 
-###   C  intro
-https://www.youtube.com/watch?v=jB8rHiUkcFg&list=PL2pXIVuAt3CmQNOdvrdHgoETv_eNXEBq9
-
- ##   C  acceso a mysql  y  sockets cliente/servidor
-https://www.youtube.com/watch?v=7z3w9a3XwyA&list=PL2pXIVuAt3Cmus0G3sIyq_TinDwf1IkIn
 
 ### C 
 http://www.lcc.uma.es/~pscp/doc/cavanzado.pdf
