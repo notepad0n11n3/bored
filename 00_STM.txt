@@ -1,0 +1,11 @@
+          post stm.deb
+
+::: sudo dpkg --add-architecture i386
+
+::: sudo apt update
+
+::: sudo apt-get install --reinstall libgl1-mesa-glx:i386
+
+                ... <3 <3 <3 
+
+          https://github.com/ValveSoftware/steam-for-linux/issues/7284
