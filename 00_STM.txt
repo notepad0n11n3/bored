@@ -1,3 +1,7 @@
+
+::: sudo apt install ./steam.deb        ... <3 <3 <3    'loc os'
+
+
           post stm.deb
 
 ::: sudo dpkg --add-architecture i386
