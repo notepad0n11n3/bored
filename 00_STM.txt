@@ -17,10 +17,10 @@
 
 ===========
 
-1.
+1. sudo dpkg -i ./steam.deb
 2. 'remove steam-devices'
 3. sudo apt update
 
 4.  
 5. xdg-desktop-portal
- . xdg-desktop-portal-gtk
+6. xdg-desktop-portal-gtk
