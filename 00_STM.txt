@@ -13,3 +13,14 @@
                 ... <3 <3 <3 
 
           https://github.com/ValveSoftware/steam-for-linux/issues/7284
+
+
+===========
+
+1.
+2. 'remove steam-devices'
+3. sudo apt update
+
+4.  
+5. xdg-desktop-portal
+ . xdg-desktop-portal-gtk
