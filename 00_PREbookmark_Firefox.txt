@@ -36,6 +36,8 @@ https://www.youtube.com/@networkhn1796/videos
 
   # BOOKS_AMAZON
 
+	https://www.youtube.com/shorts/GF7dDJDSV5g			
+
 https://www.amazon.com/Bug-Bounty-Bootcamp-Reporting-Vulnerabilities/dp/1718501544/ref=sr_1_2?crid=3VUY2K6GXZX48&keywords=bug+bounty&qid=1669226047&sprefix=bug+bounty%2Caps%2C192&sr=8-2
 
 
