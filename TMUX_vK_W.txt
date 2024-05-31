@@ -4,3 +4,7 @@ mostrar la ip de la pesta~a, para jugar con nmap  $(mochimango)
 	::: tmux display-message -p "#W" | grep -oP "\[*.\]"
 	::: tmux display-message -p "#W" | tr -d "?[]\n"
 	::: tmux display-message -p "#W" | tr -d "vpn w u ? () [] \n"
+
+function umu(){
+	tmux display-message -p "#W" | tr -d "vpn ? w u () [] \n"
+}
