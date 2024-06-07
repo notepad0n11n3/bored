@@ -1,0 +1,30 @@
+function ipTarged(){
+
+	if [ $# -ne 1 ]; then
+		echo -e "\xa\x9 1. ipTarged all \xa\x9 2. ipTarged ipTargedHere"
+	elif [ $1 == "all" ]; then
+		echo -e -n "\xA My ip: "
+		read my_ip
+
+		if [ ! -z "${my_ip}" ]; then
+			#new_my_ip=$(tmux display-message -t "htb:vpn()" -p "#w" | sed "s/\(.*\)/\(${my_ip}\)/g" | tr -d "\n")
+			#tmux rename-window -t 0 ${new_my_ip}
+			tmux rename-window -t 0 $(tmux display-message -t "htb:vpn()" -p "#w" | sed "s/\(.*\)/\(${my_ip}\)/g" | tr -d "\n")
+		fi
+		
+		echo -e -n "\xA Ip a morder: "
+		read ip_targed
+
+		if [ ! -z "${ip_targed}" ]; then
+			new_ip_targed=$(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+			tmux rename-window -t 1 ${new_ip_targed}
+		fi
+
+	else
+	#	echo -e " Ingrese el ip a morder... "
+		ip_targed="$1"
+		new_ip_targed=$(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+		tmux rename-window $new_ip_targed
+	fi
+
+}
