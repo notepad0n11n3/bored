@@ -1,30 +1,21 @@
-function ipTarged(){
 
-	if [ $# -ne 1 ]; then
-		echo -e "\xa\x9 1. ipTarged all \xa\x9 2. ipTarged ipTargedHere"
-	elif [ $1 == "all" ]; then
-		echo -e -n "\xA My ip: "
-		read my_ip
+" :r ! tmux display-message -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"
+function! Mvnb()
+	let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+	let l:output = system(l:cmd)
+	let l:output = substitute(l:output, '\n', '', 'g')
 
-		if [ ! -z "${my_ip}" ]; then
-			#new_my_ip=$(tmux display-message -t "htb:vpn()" -p "#w" | sed "s/\(.*\)/\(${my_ip}\)/g" | tr -d "\n")
-			#tmux rename-window -t 0 ${new_my_ip}
-			tmux rename-window -t 0 $(tmux display-message -t "htb:vpn()" -p "#w" | sed "s/\(.*\)/\(${my_ip}\)/g" | tr -d "\n")
-		fi
-		
-		echo -e -n "\xA Ip a morder: "
-		read ip_targed
+	"call setline('.', l:output)
+	" hasta ac[a solo ip ...<3
 
-		if [ ! -z "${ip_targed}" ]; then
-			new_ip_targed=$(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
-			tmux rename-window -t 1 ${new_ip_targed}
-		fi
+"Extra
+	let l:line1 = 'https://' . l:output
+	let l:line2 = 'http://' . l:output
 
-	else
-	#	echo -e " Ingrese el ip a morder... "
-		ip_targed="$1"
-		new_ip_targed=$(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
-		tmux rename-window $new_ip_targed
-	fi
+	call append(line('.'), l:line1)
+	call append(line('.') + 1, l:line2)
+"extrA
 
-}
+endfunction
+
+command Mvnb call Mvnb()
