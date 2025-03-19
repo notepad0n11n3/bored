@@ -1,0 +1,27 @@
+::: c_CTRL-R CTRL-L    inserter la linea focus al modo commando
+
+	
+	c_Ctrl-r " "   pegar la linea pre yy en como commandos
+
+
+::: t_Ctrl-w-"       pegar en la terminal el registro "    ...<3 <3 <3
+
+
+
+
+
+### TMUX
+
+
+    :kill-window -t 2             ... Cierra la pestana 2 ...<3
+    
+    :kill-window -all           ... Cierra todo menos la Ventana ACTUAL... <3 <3 <3 <3
+                 -a
+
+					--session  
+					-s
+
+
+    :kill-pane   -t 1	          ... Cierra el panel/split 1 ...<3 <3 <3
+    
+    :kill-pane -a     Cierra todos los splits menos el focus... <3 <3 <3 <3
