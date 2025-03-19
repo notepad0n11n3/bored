@@ -1,0 +1,9 @@
+PING google.com (142.250.0.139) 56(84) bytes of data.
+64 bytes from cg-in-f139.1e100.net (142.250.0.139): icmp_seq=1 ttl=56 time=65.5 ms
+64 bytes from cg-in-f139.1e100.net (142.250.0.139): icmp_seq=2 ttl=56 time=72.6 ms
+64 bytes from cg-in-f139.1e100.net (142.250.0.139): icmp_seq=3 ttl=56 time=64.6 ms
+64 bytes from cg-in-f139.1e100.net (142.250.0.139): icmp_seq=4 ttl=56 time=63.0 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3003ms
+rtt min/avg/max/mdev = 63.012/66.433/72.621/3.679 ms

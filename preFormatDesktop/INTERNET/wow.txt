@@ -1,0 +1,19 @@
+
+fast.com
+		1000	/	870
+		1000	/	620
+
+speedtest.com
+
+		930	/	876
+		929	/	673
+		444	/	697
+
+kali		38
+				32
+
+windows se dispara men <3
+
+Ping: 36.631 ms
+Download: 613.63 Mbit/s
+Upload: 465.85 Mbit/s
