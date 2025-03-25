@@ -1,0 +1,270 @@
+
+if [ -n "$ZSH_VERSION" ]; then
+	bindkey '^P' up-line-or-history
+	bindkey '^N' down-line-or-history
+	# en BASH esto esta por defecto... <3 <3
+fi
+
+#if [ -n "$BASH_VERSION" ]; then
+#	function exec_and_stay() {
+#		local command
+#		# Guarda el comando actual
+#		command=$(history 1 | sed 's/^[ ]*[0-9]*[ ]*//')
+#		# Ejecuta el comando
+#		eval "$command"
+#		# Mueve el cursor a la misma línea
+#		echo -ne "\r$ "
+#	}
+#
+#	# Asigna la función a `Alt-a`
+#	bind -x '"\ea": exec_and_stay'
+#fi
+
+
+### ___ <3 <3 <3
+#										::: echo "source ~/.zshrc_self" >> $HOME/.zshrc   ||	 .bashrc
+#										::: echo "source ~/.vimrc_self" >> $HOME/.vimrc
+#										::: echo "source-file ~/.tmux.conf_self" >> $HOME/.tmux.conf
+
+function LookBack(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
+	echo "  cpwd  ->  copia al clipboard la ubicacion actual 'pwd | tr -d '\n' | xclip -sel clip'"
+	echo "  q   ->  reFlojo pa teclear eXiT  :u"
+	echo "  ports ->  Extraer puertos de archivo -oG (nmap)"
+	echo "  0n11n3 --help ->  ......"
+	echo "  pit  ->  Intervalo de 30 segundos Beep <3"
+	echo "  fullUpdate  ->   apt update full-upgrade autoremove autoclean 0n11n3 updatedb etc..."
+	echo "	x89p  ->  panda8hatSession tmux <3 "
+	echo "	aeo8 -> mainSession tmux <3 "
+	echo "	pwnbx -> tmux"
+	echo "	mvnb --help -> print ipTarged | ipVpn | ipHere"
+	echo "	ipTarged -> (x89pIP | targedIP) post x89p"
+}
+
+
+function cpwd(){
+  pwd | tr -d "\n" | xclip -sel clip 
+}
+
+function q(){
+  exit 0
+}
+
+function ports(){
+	if [ $# -eq 0 ]; then
+		echo "$(cat ./nmap/a01*G | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip && echo -e "\xA\x9Ready...\xA"
+	else
+# Puedes pasar por parametro otro archivo para extraer los puertos... <3
+		echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
+	fi
+}
+
+#function notepad0n11n3(){
+function 0n11n3(){
+  if [ ${#} -eq 1 ]; then
+
+    if [ ${1} = "--checker" -o ${1} = "-c" ]; then
+      mango=$(pwd)
+      echo -e "\n\n\t\tUP\n" && cd $up && git fetch && git status && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git fetch && git status && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git fetch && git status && echo -e "\n\n\t\tBORED\n" && cd $bored && git fetch && git status && cd ${mango} &&  echo -e "\n\n\n\t Checker... OK Ok ok...\n"
+    elif [ ${1} = "--files" -o ${1} = "-f" ]; then
+      diff ~/.vimrcMAIN $up/vimrc__nanorc/.vimrcMAIN &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\xA\xA\x9   .vimrcMAIN  \x9\x9\x9Ready...<3\xA"
+      else
+        echo -e "\x9 ! .vimrcMAIN  \x9\x9WAIT...!!!***\xA"
+      fi
+
+      diff ~/.vimrcESSENTIAL $up/vimrc__nanorc/.vimrcESSENTIAL &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\x9   .vimrcESSENTIAL  \x9\x9Ready...<3\xA"
+      else
+        echo -e "\x9 ! .vimrcESSENTIAL  \x9WAIT...!!!***\xA"
+      fi
+
+      diff ~/.zshrc_self $up/zshrc_self &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\x9   .zshrc_self  \x9\x9Ready...<3\xA"
+      else
+        echo -e "\x9 ! .zshrc_self  \x9WAIT...!!!***\xA"
+      fi
+
+      diff ~/.tmux.conf $up/tmux/.tmux.conf &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\x9   .tmux.conf  \x9\x9\x9Ready...<3\xA"
+      else
+        echo -e "\x9 ! .tmux.conf  \x9\x9WAIT...!!!***\xA"
+      fi
+
+      diff ~/.config/i3/config $up/arch/i3/config &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\x9    config  \x9\x9\x9Ready...<3\xA"
+      else
+        echo -e "\x9 !  config  \x9\x9WAIT...!!!***\xA"
+      fi
+
+      diff ~/.config/i3/.i3status.conf $up/arch/i3/.i3status.conf &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\x9   .i3status.conf  \x9\x9Ready...<3\xA"
+      else
+        echo -e "\x9 ! .i3status.conf  \x9WAIT...!!!***\xA"
+      fi
+
+			diff ~/.vimrc ~/.vimrcESSENTIAL &>/dev/null
+			if [ $? = 0 ]; then
+				echo -e "\x9 ~/.vimrc == ~/.vimrcESSENTIAL \x9Ready...<3\xA"
+			else
+				echo -e "\x9 ~/.vimrc != ~/.vimrcESSENTIAL \x9WAIT ...!!!***"
+			fi
+
+
+    elif [ ${1} = "--pull" -o ${1} = "-p" ]; then
+      mango=$(pwd)
+      echo -e "\n\n\t\tUP\n" && cd $up && git pull origin master && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git pull origin master && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git pull origin master && echo -e "\n\n\t\tBORED\n" && cd $bored && git pull origin master && cd ${mango} &&  echo -e "\n\n\n\t Update notepad0n11n3 OK Ok ok...\n"
+
+    else
+      echo -e "\xA Options:\xA\x9 --checker\xA\x9 --files\xA\x9 --pull\xA"
+    fi
+  else
+    echo -e "\xA Options:\xA\x9 --checker\xA\x9 --files\xA\x9 --pull\xA"
+  fi
+
+}
+
+
+### 
+function pit(){
+  xdg-open $up/Intervalo\ de\ 30\ segundos\ con\ sonido.mp4 >/dev/null 2>&1 & disown
+}
+
+### pip2 
+# https://bootstrap.pypa.io/                 ../pip/2.7/
+#      ::: python2 $up/get-pip.py   
+export PATH=$PATH:/home/x89p/.local/bin
+#                     $(whoami)
+
+###
+function createCertificate(){
+  echo -e "\xA [1] ::: openssl genrsa -out x89p.key 2048 \x9\x9 (Generate a key)"
+  echo -e " [2] ::: openssl req -new -key x89p.key -out x89p.csr \x9\x9 (Generate a Certificate Signing Request - CSR File)"
+  echo -e " [3] ::: openssl x509 -req -in x89p.csr -CA file.cert -CAkey file.key -CAcreateserial -out x89p.pem -days 365 -sha256 \x9\x9 (Create PEM file)"
+  echo -e " [4] ::: openssl pkcs12 -export -out x89p.pfx -inkey x89p.key -in x89p.pem -certfile file.cert \xA"
+}
+
+
+#function x89p(){
+#	tiempo=0.5
+#
+#	tmux new-session -d -t "htb" -c $htb && sleep ${tiempo}
+#	tmux rename-session "HTB"
+#	tmux rename-window "vpn()" && tmux split-window -h -c $htb && tmux split-window -v -c $htb
+#
+##tmux send-key "bash" C-m && tmux send-key "clear" C-m && sleep ${tiempo}
+##tmux send-key "bash" C-m && tmux send-key "clear && vim ." C-m && sleep ${tiempo}
+#
+#	tmux select-pane -t 0
+##tmux send-key "sudo openvpn $up/0x/lab_burn" M-a && sleep ${tiempo}
+#	tmux send-key "clear && sudo openvpn $up/0x/lab_burn" M-a && sleep ${tiempo}
+#
+#	tmux select-pane -t 1
+#	tmux send-key "clear && ifconfig tun0" && sleep ${tiempo}
+#
+#	tmux select-pane -t 2
+#	tmux send-key "clear && ping -c 4 -4 " 
+#
+#	tmux select-pane -t 0
+#
+#	tmux new-window -t HTB:1 -n "?[]" -c $htb && sleep ${tiempo} && tmux send-key "ls -lah" C-m
+#	tmux select-window -t 0
+#}
+
+# tmux new -s "Go" -c $htb -n "main" 
+# tmux split-window -v / -h
+
+#---
+#		watch -n 3 'clear && ifconfig tun0'
+#		while true; do clear && ifconfig tun0; sleep 3; done
+#---
+
+function x89p(){
+	echo -e -n "\n\t Working dir -> "
+	read -r work_dir_name
+	if [ -z "${work_dir_name}" ]; then
+		work_dir_name="test"
+	fi
+	new_work_dir_path="${htb}${work_dir_name}"
+	mkdir -p ${new_work_dir_path}
+	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_burn" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
+}
+
+function aeo8(){
+	tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c term ." C-m \; select-pane -t 0
+}
+
+function pwnbx(){
+	echo -e -n "\n\t Working dir -> "
+	read -r work_dir_name
+	if [ -z "${work_dir_name}" ]; then
+		work_dir_name="test"
+	fi
+	new_work_dir_path="$HOME/.test/burn/${work_dir_name}"
+	mkdir -p "${new_work_dir_path}"
+
+	tmux new -t -d -s "pwnbx" -c ${new_work_dir_path} \; rename-window "vpn()" \; send-key "clear && ifconfig" C-m \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "clear && pwd" C-m \; split-window -h \; send-key "clear" C-m \; split-window -v \; send-key "clear && vim ." C-m \; select-window -t 0 \; split-window -h \; send-key "clear && ipTarged --all" C-m
+}
+
+
+# x89p x89p x89p x89p  extra... <3 <3 <3
+
+function mvnb(){
+	if [ $# -eq 0 ]; then
+		session_name=$(tmux display-message -p '#S' | tr -d "\n")
+		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
+	elif [ $1 == '--here' ]; then
+		tmux display-message -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
+	elif [ $1 == '--vpn' ]; then
+		session_name=$(tmux display-message -p '#S' | tr -d "\n")
+		tmux display-message -t ${session_name}:0 -p "#W" | grep -oP '\(.*?\)' | tr -d "() \n"
+	elif [ $1 == '--targed' ]; then
+		session_name=$(tmux display-message -p '#S' | tr -d "\n")
+		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
+	elif [ $1 == '--help' ]; then
+		echo -e "\n --vpn \n --targed \n --here \n \t'* noArguments ==  --targed  *"
+	fi
+}
+
+# x89p
+function ipTarged(){
+	session_name=$(tmux display-message -p '#S' | tr -d "\n")
+	if [ $# -ne 1 ]; then
+		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA"
+	elif [ $1 == "--help" ]; then
+		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA"
+	elif [ $1 == "--all" ]; then
+		echo -e -n "\xA My ip: "
+		read my_ip
+		if [ ! -z "${my_ip}" ]; then
+#tmux rename-window -t 0 $(tmux display-message -t "htb:vpn()" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
+			#tmux rename-window -t 0 $(tmux display-message -t "x89p:0" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n") *** *** ***
+			tmux rename-window -t 0 $(tmux display-message -t "${session_name}:0" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
+		fi
+		echo -e -n "\xA Ip a morder: "
+		read ip_targed
+		if [ ! -z "${ip_targed}" ]; then
+#tmux rename-window -t 1 $(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+#tmux rename-window -t 1 $(tmux display-message -t "htb:?[]" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+			#tmux rename-window -t 1 $(tmux display-message -t "x89p:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n") *** *** ***
+			tmux rename-window -t 1 $(tmux display-message -t "${session_name}:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+		fi
+##tmux rename-window -t 1 $(tmux display-message -t ":1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")  ":1"  si no especificas en nombreSession, asume que estas trabajando la sesActual
+##tmux rename-window -t 0 $(tmux display-message -t ":0" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
+	else
+		ip_targed="$1"
+		#tmux rename-window -t 1 $(tmux display-message -t "x89p:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")  *** *** ***
+		tmux rename-window -t 1 $(tmux display-message -t "${session_name}:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+	fi
+
+}
+
+function fullUpdate(){
+	local_dir=$(pwd)
+	cd $desk && sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && 0n11n3 --pull && sudo updatedb && bash $up/grub__wallpaper_noSUDO.sh && echo -e "\xA\x9\x9 ewe \xA" && cd ${local_dir}
+}
