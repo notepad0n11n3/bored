@@ -1,8 +1,14 @@
+	kaliMain:					KK
+		vkali:		vk_K
+		vArch:		va_K
+		vWin:			vw_K
 
-vK_k
-vW_k
+	winMain:					WW
+		vkali:		vk_W
+		vArch:		va_W
+		vWin:			vw_W
 
-vK_w
-vW_w
-
-KA
+	archMain:					AA
+		vkali:		vk_A
+		vArch:		va_A
+		vWin:			vw_A
