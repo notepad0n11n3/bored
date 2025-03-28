@@ -1,3 +1,0 @@
-" emacs  ChatGpt " 
-" ::: emacs -nw " 
-" 'emacs en terminal no ventana emergente <3' "  

@@ -1,1 +1,0 @@
-' cmd:: vmware.exe -x "D:\vMachine\kali\*.vmx"' 
