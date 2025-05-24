@@ -1,0 +1,2 @@
+Prediccion (posiciones 1-50):
+14 24 26 36 37 42
