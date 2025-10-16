@@ -1,0 +1,15 @@
+      (tengo pip2 en $up  *.py)
+
+primero instala paramiko con pip2 install paramiko
+
+
+
+para el error de pwntools busque el paquete que daba error 'capstone'
+trate de instalar por separado capstone pero siempre daba error...
+
+              encontre el comando ::: pip2 install --upgrade setuptools
+              despues le di a     ::: pip2 install capstone
+
+  y termine de instalar pwntools <3 <3
+                            
+                            ::: pip2 install pwntools             ... <3 <3 <3

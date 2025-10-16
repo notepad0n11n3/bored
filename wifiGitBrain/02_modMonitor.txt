@@ -1,0 +1,13 @@
+::: airmon-ng start wlan1
+
+::: ifconfig
+::: iwconfig
+
+::: ifconfig wlan1mon up
+
+::: airmon-ng stop wlan1mon    /// stopMonitorMode_tpLink
+
+::: pkill dhclient && pkill wpa_supplicant ||::: airmon-ng check kill
+::: killall dhclient wpa_supplicant
+
+::: /etc/init.d/networking restart    ///networkingService

@@ -1,0 +1,11 @@
+::: airodump-ng wlan1mon
+
+::: airodump-ng -c numberChanel wlan1mon
+
+::: airodump-ng -c numberChanel --essid chanchoFelizII wlan1mon
+      ||
+::: airodump-ng -c numberChanel --bssid 78:65:59:6E:BF:C6 wlan1mon
+
+
+::: mkdir workArea && cd workArea
+::: airodump-ng -c 8 -w bHoleSun --bssid bssidRouterHere wlan1mon    // -w write
